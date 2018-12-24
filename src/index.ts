@@ -1,7 +1,7 @@
-
-import * as SQLite from 'sqlite3';
 import { Database } from './database';
 import { Server } from './server';
+
+require('dotenv').config();
 
 async function main() {
     let db: Database = new Database();
