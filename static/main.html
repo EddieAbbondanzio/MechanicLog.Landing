@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Curious to how the site is built? Check out the repo: https://github.com/EddieAbbondanzio/MechanicLog.Landing -->
+
+    <meta charset="UTF-8">
+    <title>MechanicLog</title>
+
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="blur">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3 h-50 my-5 my-sm-auto">
+                    <div class="card border-0">
+                        <div class="card-header bg-primary text-white text-center">
+                            <img src="/static/logo.png" class="icon" />
+                            <h1 class="logo">MechanicLog</h1>
+                        </div>
+                        <div class="card-body py-4 px-3 px-md-5 bg-light">
+                            <!-- Big title for desktop. -->
+                            <h2 class="card-title text-center pb-3 d-none d-md-block">
+                                Vehicle Maintenance Logging Made Simple
+                            </h2>
+                            <!-- Small title for mobile. -->
+                            <h5 class="card-title text-center pb-3 d-sm-block d-md-none">
+                                Vehicle Maintenance Logging Made Simple
+                            </h5>
+
+                            <!-- Main body -->
+                            <p class="text-muted pb-5">
+                                Managing your personal, or commercial fleet of vehicles has never been easier. Log
+                                every
+                                service down to the exact mile, and receipt. Schedule email reminders to never forget
+                                when
+                                your vehicles are due for maintenance.
+                            </p>
+
+                            <div id="input-row" class="row">
+                                <div class="col-12 col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+                                    <div class="input-group mb-2 mx-auto">
+                                        <input id="textbox-email" type="email" class="form-control px-2" placeholder="Email me when it's ready"
+                                            aria-label="Email me when it's ready" aria-describedby="button-send">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-warning" type="button" id="button-send">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Good Message -->
+                            <div id="good-message" class="row d-none">
+                                <div class="col">
+                                    <div class="alert alert-success" role="alert">
+                                        Thanks! You'll recieve a notification when we launch.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bad Message -->
+                            <div id="bad-message" class="row d-none">
+                                <div class="col">
+                                    <div class="alert alert-danger" role="alert">
+                                        Error. Something went wrong. Please try again later.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ensure the page loads before the script runs -->
+    <script type="text/javascript" src="/static/script.js"></script>
+</body>
+
+</html>

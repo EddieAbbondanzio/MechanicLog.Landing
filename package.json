@@ -1,0 +1,25 @@
+{
+  "name": "mechaniclog-landing",
+  "version": "1.0.0",
+  "description": "The launch page for the SaaS product MechanicLog.Net",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eddie Abbondanzio",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/express-rate-limit": "^2.9.3",
+    "@types/helmet": "0.0.42",
+    "@types/node": "^10.12.18",
+    "@types/sqlite3": "^3.1.3",
+    "express": "^4.16.4",
+    "express-rate-limit": "^3.3.2",
+    "helmet": "^3.15.0",
+    "sqlite3": "^4.0.4",
+    "typescript": "^3.2.2"
+  }
+}
