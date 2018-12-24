@@ -77,7 +77,7 @@ export class Server {
         });
 
         return new Promise<void>((resolve, reject) => {
-            this._app.listen(80, () => {
+            this._app.listen(3117, () => {
                 console.log('Server is listening');
             });
         });
