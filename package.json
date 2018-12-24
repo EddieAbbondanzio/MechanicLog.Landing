@@ -5,6 +5,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "start": "pm2 start ./dist/index.js",
+    "restart": "pm2 restart all",
+    "stop": "pm2 stop ./dist/index.js",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -12,6 +12,13 @@
      */
     function sendRequest() {
         let httpRequest = new XMLHttpRequest();
+
+        //Does it an email address in it?
+        if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailTextbox.value)) {
+            alert('Please enter a valid email.')
+            return;
+        }
+
         httpRequest.open('POST', 'http://mechaniclog.net/subscribe', true);
         httpRequest.setRequestHeader('Content-Type', 'application/json');
 
