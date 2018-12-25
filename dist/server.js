@@ -66,6 +66,12 @@ class Server {
                     }
                 }
             }));
+            /**
+             * Request to get the robots.txt
+             */
+            this._app.get('/robots.txt', (req, res) => __awaiter(this, void 0, void 0, function* () {
+                res.sendFile(Path.resolve('static/robots.txt'));
+            }));
             return new Promise((resolve, reject) => {
                 this._app.listen(3117, () => {
                     console.log('Server is listening');

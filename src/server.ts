@@ -31,7 +31,7 @@ export class Server {
         this._app.use(Express.json());
         this._app.use(Helmet());
         this._app.use('/static', Express.static(__dirname + '/../static'));
-    
+
         //Prevent from spam attacks
         let apiLimiter = RateLimit({
             windowMs: 15 * 60 * 1000, // 15 minutes
@@ -74,6 +74,13 @@ export class Server {
                     }
                 }
             }
+        });
+
+        /**
+         * Request to get the robots.txt
+         */
+        this._app.get('/robots.txt', async (req, res) => {
+            res.sendFile(Path.resolve('static/robots.txt'));
         });
 
         return new Promise<void>((resolve, reject) => {
